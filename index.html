@@ -110,6 +110,15 @@
     .reveal{opacity:1;transform:none;transition:none}
   }
 </style>
+<script>
+/* 카카오톡 안에서 열리면 휴대폰 기본 브라우저로 넘기기 */
+(function(){
+  var ua=navigator.userAgent||'';
+  if(/KAKAOTALK/i.test(ua)){
+    location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(location.href);
+  }
+})();
+</script>
 </head>
 <body>
 <main class="page">
