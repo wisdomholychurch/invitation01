@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지성교회 안수집사 임직감사예배</title>
+<meta name="description" content="2026년 12월 13일(주일) 오후 3시 · 지성교회 예배당">
+<!-- 카카오톡·문자 미리보기 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="지성교회 안수집사 임직감사예배">
+<meta property="og:description" content="2026. 12. 13 (주일) 오후 3시 · 지성교회 예배당">
+<meta property="og:image" content="https://wisdomholychurch.github.io/invitation01/img/og.jpg">
+<meta property="og:url" content="https://wisdomholychurch.github.io/invitation01/">
+<meta name="theme-color" content="#F8F0ED">
+<style>
+  :root{
+    --w:min(100vw,480px);
+    --purple:#634093;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:#F8F0ED;-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+  .page{width:var(--w);margin:0 auto;background:#fff;overflow:hidden;position:relative;box-shadow:0 0 40px rgba(99,64,147,.08)}
+  img{display:block;max-width:100%}
+  .abs{position:absolute}
+  .sec{position:relative}
+  .sec>img.bg{width:100%;height:auto}
+
+  /* ---------- 첫 화면 ---------- */
+  .hero{position:relative;width:100%;padding-top:141.3889%; /* 1527/1080 */ background:#fff;overflow:hidden}
+  .hero .abs{will-change:transform,opacity}
+  .fl{opacity:0}
+  .fl-tl{left:0;top:0;width:42.1296%;transform-origin:0 0;animation:bloomTL 1.8s cubic-bezier(.2,.8,.2,1) .1s forwards, swayTL 7s ease-in-out 1.9s infinite alternate}
+  .fl-br{right:0;top:63.6542%;width:42.1296%;transform-origin:100% 100%;animation:bloomBR 1.8s cubic-bezier(.2,.8,.2,1) .4s forwards, swayBR 8s ease-in-out 2.2s infinite alternate}
+  @keyframes bloomTL{from{opacity:0;transform:scale(.82) rotate(-5deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+  @keyframes bloomBR{from{opacity:0;transform:scale(.82) rotate(5deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+  @keyframes swayTL{from{transform:rotate(0)}to{transform:rotate(1.6deg)}}
+  @keyframes swayBR{from{transform:rotate(0)}to{transform:rotate(-1.8deg)}}
+
+  .t{opacity:0}
+  .t-icon{animation:rise 1.2s ease .9s forwards}
+  .t-sub{animation:rise 1.2s ease 1.3s forwards}
+  .t-title{opacity:1;-webkit-clip-path:inset(0 100% 0 0);clip-path:inset(0 100% 0 0);animation:write 1.8s ease-in-out 1.8s forwards}
+  .t-invite{animation:soft 1.8s ease 3.4s forwards}
+  .t-divider{transform:scaleX(0);opacity:1;animation:line 1s ease 4.6s forwards}
+  .t-date{animation:rise 1.2s ease 5s forwards}
+  .t-logo{animation:rise 1.2s ease 5.4s forwards}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes write{to{-webkit-clip-path:inset(0 0 0 0);clip-path:inset(0 0 0 0)}}
+  @keyframes soft{from{opacity:0;transform:scale(.94);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+  @keyframes line{to{transform:scaleX(1)}}
+
+  /* 꽃잎 */
+  .petal{position:absolute;top:-6%;width:3.2%;padding-top:2.4%;border-radius:80% 0 80% 0;
+    background:linear-gradient(135deg,#FBD3CF,#F2A9A1);opacity:0;pointer-events:none;
+    animation:fall linear infinite}
+  @keyframes fall{
+    0%{opacity:0;transform:translate(0,0) rotate(0)}
+    10%{opacity:.85}
+    50%{transform:translate(6vw,55vh) rotate(160deg)}
+    90%{opacity:.7}
+    100%{opacity:0;transform:translate(-4vw,110vh) rotate(320deg)}
+  }
+
+  /* 스크롤 안내 */
+  .hint{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:20;opacity:0;transition:opacity .6s;pointer-events:none;text-align:center}
+  .hint.show{opacity:1}
+  .hint svg{width:34px;height:34px;animation:bob 1.6s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+  /* 아래 내용이 서서히 나타나게 */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* 임직자 사진 자리 */
+  .photo{position:absolute;overflow:hidden;background:#fff}
+  .photo img{width:100%;height:100%;object-fit:cover}
+
+  /* 디데이 */
+  .dday{position:absolute;left:30%;width:40%;top:89.6%;height:6.2%;background:#F9F3F0;
+    display:flex;align-items:center;justify-content:center;
+    font-family:"TlabR",serif;color:var(--purple);font-size:calc(var(--w)*0.0494);line-height:1}
+  @font-face{font-family:"TlabR";src:url(font/tlab-r.ttf) format("truetype");font-display:swap}
+
+  /* 지도 */
+  .map{position:absolute;left:8.333%;width:84.259%;top:15.341%;height:16.565%;display:block;border-radius:6px;overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,.06)}
+  .map img{width:100%;height:100%;object-fit:cover}
+  .map .open{position:absolute;right:3%;top:36%;background:#03C75A;color:#fff;text-decoration:none;
+    font-weight:700;font-size:calc(var(--w)*0.03);padding:.5em .9em;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.18);
+    display:flex;align-items:center;gap:.35em;white-space:nowrap}
+  .map .open svg{width:1em;height:1em}
+
+  /* 공유 버튼 */
+  .btn{position:absolute;display:block;background:transparent;border:0;padding:0;cursor:pointer;border-radius:14px;
+    -webkit-tap-highlight-color:rgba(99,64,147,.12)}
+  .btn:focus-visible{outline:3px solid var(--purple);outline-offset:2px}
+  .btn-kakao{left:12%;width:26%;top:84.3%;height:10.6%}
+  .btn-url{left:58%;width:26%;top:84.3%;height:10.6%}
+
+  .toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:rgba(40,30,55,.92);color:#fff;
+    padding:14px 22px;border-radius:999px;font-size:16px;opacity:0;transition:.35s;z-index:30;white-space:nowrap;pointer-events:none}
+  .toast.show{opacity:1;transform:translate(-50%,0)}
+
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+  @media (prefers-reduced-motion:reduce){
+    .fl,.t,.t-title,.t-divider{animation:none!important;opacity:1!important;transform:none!important;-webkit-clip-path:none!important;clip-path:none!important}
+    .petal{display:none}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- 1. 첫 화면 -->
+  <section class="hero" aria-label="지성교회 안수집사 임직감사예배 초대합니다. 2026년 12월 13일 주일 오후 3시">
+    <img class="abs fl fl-tl" src="img/fl_tl.png" alt="">
+    <img class="abs fl fl-br" src="img/fl_br.png" alt="">
+    <img class="abs t t-icon"    src="img/h_icon.png"    alt="" style="left:44.074%;top:14.931%;width:10.926%">
+    <img class="abs t t-sub"     src="img/h_sub.png"     alt="지성교회 안수집사" style="left:35.833%;top:23.445%;width:27.870%">
+    <img class="abs t t-title"   src="img/h_title.png"   alt="임직감사예배" style="left:21.481%;top:27.505%;width:57.130%">
+    <img class="abs t t-invite"  src="img/h_invite.png"  alt="초대합니다" style="left:11.389%;top:38.769%;width:77.407%">
+    <img class="abs t t-divider" src="img/h_divider.png" alt="" style="left:25.926%;top:60.380%;width:47.593%">
+    <img class="abs t t-date"    src="img/h_date.png"    alt="2026. 12. 13 (주일) 오후 3시" style="left:25.556%;top:66.929%;width:48.611%">
+    <img class="abs t t-logo"    src="img/h_logo.png"    alt="예수교대한성결교회 지성교회" style="left:27.685%;top:79.044%;width:44.907%">
+    <span class="petal" style="left:8%;animation-duration:13s;animation-delay:2s"></span>
+    <span class="petal" style="left:22%;animation-duration:16s;animation-delay:5s;width:2.4%;padding-top:1.8%"></span>
+    <span class="petal" style="left:38%;animation-duration:14s;animation-delay:8s"></span>
+    <span class="petal" style="left:55%;animation-duration:17s;animation-delay:3.5s;width:2.6%;padding-top:2%"></span>
+    <span class="petal" style="left:70%;animation-duration:12s;animation-delay:6.5s"></span>
+    <span class="petal" style="left:86%;animation-duration:15s;animation-delay:1.2s;width:2.4%;padding-top:1.8%"></span>
+  </section>
+
+  <!-- 2. 인사말 -->
+  <section class="sec reveal">
+    <img class="bg" src="img/s1.webp" loading="lazy" decoding="async"
+      alt="하나님의 은혜 가운데 지성교회가 네 분의 안수집사를 세웁니다. 새롭게 직분을 받는 이들을 축복하며 함께 감사의 예배를 드리고자 합니다. 오셔서 기쁨을 함께 나누어 주시기 바랍니다. 지성교회 담임목사 유미애, 임직자 이정렬 김은영 박성혁 이재훈">
+  </section>
+
+  <!-- 3. 임직자 -->
+  <section class="sec reveal" id="people">
+    <img class="bg" src="img/s2.webp" loading="lazy" decoding="async" alt="임직자(안수집사) 이정렬, 김은영, 박성혁, 이재훈">
+    <!-- 사진 자리 (사진이 생기면 img 폴더에 p1~p4.jpg로 넣고 아래 주석을 풀면 됩니다) -->
+    <!--
+    <div class="photo" style="left:18.611%;top:20.751%;width:25.185%;height:25.728%"><img src="img/p1.jpg" alt="이정렬"></div>
+    <div class="photo" style="left:55.741%;top:20.751%;width:25.185%;height:25.728%"><img src="img/p2.jpg" alt="김은영"></div>
+    <div class="photo" style="left:18.611%;top:59.624%;width:25.185%;height:25.728%"><img src="img/p3.jpg" alt="박성혁"></div>
+    <div class="photo" style="left:55.741%;top:59.624%;width:25.185%;height:25.728%"><img src="img/p4.jpg" alt="이재훈"></div>
+    -->
+  </section>
+
+  <!-- 4. 달력 · 디데이 -->
+  <section class="sec reveal" id="calendar">
+    <img class="bg" src="img/s3.webp" loading="lazy" decoding="async" alt="임직감사예배일 2026년 12월 13일 주일 오후 3시">
+    <div class="dday" id="dday" aria-live="polite">D-00</div>
+  </section>
+
+  <!-- 5. 장소 · 오시는 길 · 공유 -->
+  <section class="sec reveal" id="place">
+    <img class="bg" src="img/s4.webp" loading="lazy" decoding="async"
+      alt="장소 경기도 부천시 원미구 부천로122번길 49 지성교회 예배당. 오시는 길. 지하철 1호선 부천역 1, 3번 출구에서 원미구청 방면으로 약 20분 도보, 7호선 춘의역 2번 출구에서 원미구청 방면으로 약 15분 도보. 버스 원미동우체국(마을) 또는 부천북초등학교.원미동우체국 정류장 이용. 자가용 원미구청 주차장 이용(주말 무료), 도보 3분">
+    <a class="map" id="mapLink" href="#" target="_blank" rel="noopener" aria-label="네이버 지도에서 지성교회 위치 열기">
+      <img src="img/map.webp" alt="지성교회 약도. 원미구청 주차장에서 걸어서 교회로 오는 길">
+      <span class="open">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        네이버 지도
+      </span>
+    </a>
+    <button class="btn btn-kakao" id="btnKakao" type="button" aria-label="카카오톡으로 초대장 공유하기"></button>
+    <button class="btn btn-url" id="btnUrl" type="button" aria-label="초대장 주소 복사하기"></button>
+  </section>
+
+</main>
+
+<div class="hint" id="hint" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none" stroke="#634093" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ===== 여기만 고치면 돼요 ===== */
+var CONFIG = {
+  // 예배 날짜와 시간 (한국 시간)
+  eventDate: "2026-12-13T15:00:00+09:00",
+  // 네이버 지도 링크 (지성교회 위치)
+  naverMap: "https://naver.me/FW0PJUwl",
+  // 카카오 JavaScript 키 (받으면 넣으세요. 비워 두면 휴대폰 공유창으로 공유돼요)
+  kakaoKey: "7c9b0922c649a9059f828591afa7f09c",
+  // 카카오톡 카드에 들어갈 내용
+  shareTitle: "지성교회 안수집사 임직감사예배",
+  shareText: "2026. 12. 13 (주일) 오후 3시 · 지성교회 예배당",
+  shareImage: "img/og.jpg"
+};
+/* ============================== */
+
+(function(){
+  // 네이버 지도
+  document.getElementById('mapLink').href = CONFIG.naverMap;
+
+  // 디데이 (한국 날짜 기준)
+  function kstDay(d){ var k=new Date(d.getTime()+9*3600*1000); return Date.UTC(k.getUTCFullYear(),k.getUTCMonth(),k.getUTCDate()); }
+  function updateDday(){
+    var diff=Math.round((kstDay(new Date(CONFIG.eventDate))-kstDay(new Date()))/86400000);
+    var el=document.getElementById('dday');
+    el.textContent = diff>0 ? 'D-'+diff : (diff===0 ? '예배 당일' : '감사합니다');
+  }
+  updateDday(); setInterval(updateDday, 60*60*1000);
+
+  // 아래 내용이 서서히 나타나게
+  var items=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.15});
+    items.forEach(function(el){io.observe(el)});
+  } else { items.forEach(function(el){el.classList.add('in')}); }
+
+  // 스크롤 안내 화살표
+  var hint=document.getElementById('hint');
+  setTimeout(function(){ if(window.scrollY<40) hint.classList.add('show'); }, 6200);
+  window.addEventListener('scroll',function(){ if(window.scrollY>40) hint.classList.remove('show'); },{passive:true});
+
+  // 알림
+  var toast=document.getElementById('toast'), tt;
+  function say(msg){ toast.textContent=msg; toast.classList.add('show'); clearTimeout(tt); tt=setTimeout(function(){toast.classList.remove('show')},2600); }
+
+  // 주소 복사
+  function pageUrl(){ return location.href.split('#')[0]; }
+  function copy(text, done){
+    function fallback(){
+      var ta=document.createElement('textarea'); ta.value=text; ta.setAttribute('readonly','');
+      ta.style.position='fixed'; ta.style.top='-1000px'; document.body.appendChild(ta); ta.select();
+      var ok=false; try{ ok=document.execCommand('copy'); }catch(e){}
+      document.body.removeChild(ta); done(ok);
+    }
+    if(navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(text).then(function(){done(true)}, fallback);
+    } else fallback();
+  }
+  document.getElementById('btnUrl').addEventListener('click',function(){
+    copy(pageUrl(), function(ok){ say(ok ? '초대장 주소를 복사했어요' : '주소를 길게 눌러 복사해 주세요'); });
+  });
+
+  // 카카오톡 공유
+  function absUrl(p){ var a=document.createElement('a'); a.href=p; return a.href; }
+  var kakaoReady=false;
+  if(CONFIG.kakaoKey){
+    var s=document.createElement('script');
+    s.src='https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js'; s.async=true;
+    s.onload=function(){ try{ if(!Kakao.isInitialized()) Kakao.init(CONFIG.kakaoKey); kakaoReady=true; }catch(e){} };
+    document.head.appendChild(s);
+  }
+  document.getElementById('btnKakao').addEventListener('click',function(){
+    var url=pageUrl();
+    if(kakaoReady){
+      try{
+        Kakao.Share.sendDefault({
+          objectType:'feed',
+          content:{ title:CONFIG.shareTitle, description:CONFIG.shareText, imageUrl:absUrl(CONFIG.shareImage),
+                    link:{ mobileWebUrl:url, webUrl:url } },
+          buttons:[{ title:'초대장 보기', link:{ mobileWebUrl:url, webUrl:url } }]
+        });
+        return;
+      }catch(e){}
+    }
+    if(navigator.share){
+      navigator.share({ title:CONFIG.shareTitle, text:CONFIG.shareText, url:url }).catch(function(){});
+      return;
+    }
+    copy(url, function(ok){ say(ok ? '주소를 복사했어요. 카카오톡에 붙여 넣어 주세요' : '주소를 길게 눌러 복사해 주세요'); });
+  });
+})();
+</script>
+</body>
+</html>
