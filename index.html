@@ -83,20 +83,20 @@
   @font-face{font-family:"TlabR";src:url(font/tlab-r.ttf) format("truetype");font-display:swap}
 
   /* 지도 */
-  .map{position:absolute;left:8.333%;width:84.259%;top:15.341%;height:16.565%;display:block;border-radius:6px;overflow:hidden;
-    box-shadow:0 2px 10px rgba(0,0,0,.06)}
-  .map img{width:100%;height:100%;object-fit:cover}
-  .map .open{position:absolute;right:3%;top:36%;background:#03C75A;color:#fff;text-decoration:none;
-    font-weight:700;font-size:calc(var(--w)*0.03);padding:.5em .9em;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.18);
-    display:flex;align-items:center;gap:.35em;white-space:nowrap}
-  .map .open svg{width:1em;height:1em}
-
+  .mapwrap{padding:0 8.333%;background:#fff}
+  .map{position:relative;display:block;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+  .map img{width:100%;height:auto}
+  .open{margin:4% auto 0;background:#03C75A;color:#fff;text-decoration:none;
+    font-weight:700;font-size:calc(var(--w)*0.04);padding:.7em 1.4em;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.15);
+    display:flex;align-items:center;justify-content:center;gap:.4em;width:fit-content;white-space:nowrap}
+  .open svg{width:1.1em;height:1.1em}
+  .map .credit{position:absolute;left:2%;bottom:2%;font-size:10px;color:#666;background:rgba(255,255,255,.75);padding:1px 4px;border-radius:3px}
   /* 공유 버튼 */
   .btn{position:absolute;display:block;background:transparent;border:0;padding:0;cursor:pointer;border-radius:14px;
     -webkit-tap-highlight-color:rgba(99,64,147,.12)}
   .btn:focus-visible{outline:3px solid var(--purple);outline-offset:2px}
-  .btn-kakao{left:12%;width:26%;top:84.3%;height:10.6%}
-  .btn-url{left:58%;width:26%;top:84.3%;height:10.6%}
+  .btn-kakao{left:12%;width:26%;top:77.2%;height:14.8%}
+  .btn-url{left:58%;width:26%;top:77.2%;height:14.8%}
 
   .toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:rgba(40,30,55,.92);color:#fff;
     padding:14px 22px;border-radius:999px;font-size:16px;opacity:0;transition:.35s;z-index:30;white-space:nowrap;pointer-events:none}
@@ -158,18 +158,25 @@
   </section>
 
   <!-- 5. 장소 · 오시는 길 · 공유 -->
-  <section class="sec reveal" id="place">
-    <img class="bg" src="img/s4.webp" loading="lazy" decoding="async"
-      alt="장소 경기도 부천시 원미구 부천로122번길 49 지성교회 예배당. 오시는 길. 지하철 1호선 부천역 1, 3번 출구에서 원미구청 방면으로 약 20분 도보, 7호선 춘의역 2번 출구에서 원미구청 방면으로 약 15분 도보. 버스 원미동우체국(마을) 또는 부천북초등학교.원미동우체국 정류장 이용. 자가용 원미구청 주차장 이용(주말 무료), 도보 3분">
-    <a class="map" id="mapLink" href="#" target="_blank" rel="noopener" aria-label="네이버 지도에서 지성교회 위치 열기">
-      <img src="img/map.webp" alt="지성교회 약도. 원미구청 주차장에서 걸어서 교회로 오는 길">
-      <span class="open">
+  <section class="reveal" id="place">
+    <img class="bg" src="img/s4a.webp" loading="lazy" decoding="async" style="width:100%;height:auto"
+      alt="장소 경기도 부천시 원미구 부천로122번길 49 지성교회 예배당">
+    <div class="mapwrap">
+      <a class="map" id="mapLink" href="#" target="_blank" rel="noopener" aria-label="네이버 지도에서 지성교회 위치 열기">
+        <img src="img/map.webp" loading="lazy" decoding="async" alt="지성교회 주변 지도. 원미구청, 부천북초등학교, 원미종합시장 근처">
+        <span class="credit">© NAVER Corp.</span>
+      </a>
+      <a class="open" id="mapBtn" href="#" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
-        네이버 지도
-      </span>
-    </a>
-    <button class="btn btn-kakao" id="btnKakao" type="button" aria-label="카카오톡으로 초대장 공유하기"></button>
-    <button class="btn btn-url" id="btnUrl" type="button" aria-label="초대장 주소 복사하기"></button>
+        네이버 지도로 길찾기
+      </a>
+    </div>
+    <div class="sec">
+      <img class="bg" src="img/s4b.webp" loading="lazy" decoding="async"
+        alt="오시는 길. 지하철 1호선 부천역 1, 3번 출구에서 원미구청 방면으로 약 20분 도보, 7호선 춘의역 2번 출구에서 원미구청 방면으로 약 15분 도보. 버스 원미동우체국(마을) 또는 부천북초등학교.원미동우체국 정류장 이용. 자가용 원미구청 주차장 이용(주말 무료), 도보 3분">
+      <button class="btn btn-kakao" id="btnKakao" type="button" aria-label="카카오톡으로 초대장 공유하기"></button>
+      <button class="btn btn-url" id="btnUrl" type="button" aria-label="초대장 주소 복사하기"></button>
+    </div>
   </section>
 
 </main>
@@ -198,6 +205,7 @@ var CONFIG = {
 (function(){
   // 네이버 지도
   document.getElementById('mapLink').href = CONFIG.naverMap;
+  document.getElementById('mapBtn').href = CONFIG.naverMap;
 
   // 디데이 (한국 날짜 기준)
   function kstDay(d){ var k=new Date(d.getTime()+9*3600*1000); return Date.UTC(k.getUTCFullYear(),k.getUTCMonth(),k.getUTCDate()); }
